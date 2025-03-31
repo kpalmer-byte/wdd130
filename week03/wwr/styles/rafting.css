@@ -1,0 +1,96 @@
+:root{
+    --heading-background-color: #E5F1F2;
+    --heading-text-color: #002E4C;
+    --heading-font: "Rubik Dirt", system-ui;
+    --paragraph-font: "Geist", sans-serif;
+    --paragraph-color: #48ABD6;
+    --padding: 1rem;
+    --border: 1px solid #E5F1F2;
+}
+header img{
+    height: 350px;
+}
+h1 {
+    text-align:center;
+    font-family: var(--heading-font);
+    font-size: 4.0rem;
+    font-weight: 400; 
+    font-style: normal;
+    color: var(--heading-text-color);background-color: var(--heading-background-color);
+    padding: 1rem;
+}
+
+h2 {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 2.0rem;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--heading-text-color);
+}
+
+p {
+font-family: var(--paragraph-font);
+font-size: 1.5rem;
+font-weight: 400;
+font-style: normal;
+color: var(--paragraph-color);
+}
+
+.sociallinks {
+text-decoration: none;
+}
+
+.sociallinks a img{
+    height: 100px;
+}
+
+body {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.hero img {
+    width: 100%; 
+    height: auto; 
+}
+
+.hero h1 {
+    position: absolute;
+    height: auto;
+    width: auto;
+    top: 10%; 
+    left: 10%;
+    right: 10%
+}
+
+.hero article {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    background-color: rgba(205, 165, 88, 0.6);
+    padding: 1rem;
+    
+}
+
+.hero article img {
+    float: right;
+    margin-left: 1rem; 
+    max-width: 30%; 
+    height: auto;
+}
+
+.hero p {
+    text-align: left;
+    color: var(--heading-text-color);
+    clear: both;
+}
