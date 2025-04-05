@@ -1,54 +1,57 @@
 :root{
-    --heading-background-color: #E5F1F2;
-    --heading-text-color: #002E4C;
+    --primary-color: #002E4C;
+    --secondary-color: rgb(228, 240, 241);
+    --accent-color-1: #CDA558;
+    --accent-color-2: #48ABD6;
     --heading-font: "Rubik Dirt", system-ui;
     --paragraph-font: "Geist", sans-serif;
-    --paragraph-color: #48ABD6;
-    --padding: 1rem;
-    --border: 1px solid #E5F1F2;
-}
-header img{
-    height: 350px;
-}
-h1 {
-    text-align:center;
-    font-family: var(--heading-font);
-    font-size: 4.0rem;
-    font-weight: 400; 
-    font-style: normal;
-    color: var(--heading-text-color);background-color: var(--heading-background-color);
-    padding: 1rem;
-}
-
-h2 {
-    text-align: center;
-    font-family: var(--heading-font);
-    font-size: 2.0rem;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--heading-text-color);
-}
-
-p {
-font-family: var(--paragraph-font);
-font-size: 1.5rem;
-font-weight: 400;
-font-style: normal;
-color: var(--paragraph-color);
-}
-
-.sociallinks {
-text-decoration: none;
-}
-
-.sociallinks a img{
-    height: 100px;
+    --paragraph-size: 1.2rem
 }
 
 body {
     width: 100%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+}
+
+header{
+    margin: 1rem auto;
+	display: grid;
+	grid-template-columns: 120px 1fr 1fr;
+	align-items: center;
+	border-bottom: 1px solid #E5F1F2;
+	max-width: 1000px;
+}
+
+header img{
+    margin: 0 0.65rem 0 0.65rem;
+	width: 120px;
+	height: auto;
+}
+
+header h3{
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+    font-weight: 400; 
+    font-style: normal;
+    color: var(--primary-color);
+}
+
+.navigation {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+	font-family: var(--paragraph-font);
+}
+
+.navigation a {
+    flex: 1 1 auto;
+	display: block;
+	color:  var(--accent-color-2);
+	padding: 20px;
+	text-decoration: none;
+	font-size: var(--paragraph-size)
 }
 
 .hero {
@@ -69,7 +72,15 @@ body {
     width: auto;
     top: 10%; 
     left: 10%;
-    right: 10%
+    right: 10%;
+    text-align:center;
+    font-family: var(--heading-font);
+    font-size: 4.0rem;
+    font-weight: 400; 
+    font-style: normal;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 1rem;
 }
 
 .hero article {
@@ -77,9 +88,8 @@ body {
     bottom: 10%;
     left: 5%;
     right: 5%;
-    background-color: rgba(205, 165, 88, 0.6);
+    background-color: rgb(228, 240, 241, 0.5);
     padding: 1rem;
-    
 }
 
 .hero article img {
@@ -90,7 +100,91 @@ body {
 }
 
 .hero p {
-    text-align: left;
-    color: var(--heading-text-color);
-    clear: both;
+    color: var(--primary-color);
+    font-family: var(--paragraph-font);
+    font-size: var(--paragraph-size);
+    font-weight: 400;
+}
+
+h2 {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 2.0rem;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary-color);
+}
+
+p {
+    font-family: var(--paragraph-font);
+    font-size: var(--paragraph-size);
+    font-weight: 400;
+    font-style: normal;
+    color: var(--accent-color-2);
+}    
+
+.history{
+    position: relative;
+    margin: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto; 
+    align-items: center;
+    gap: 2rem;
+}
+
+.history h2{
+    position: relative;
+    grid-column: 1/4;
+}
+.history img{
+    position: relative;
+    margin: 0;
+	width: 100%;
+	height: auto;
+    grid-column: 2;
+    align-self: center;
+}
+
+.history p{
+    position: relative;
+    grid-column: 1; 
+    text-align: justify;
+}
+
+.history p.p2{
+    position: relative;
+    grid-column: 3; 
+    text-align: justify;
+}
+
+.adventure{
+    font-family: var(--paragraph-font);
+    color: var(--accent-color-2);
+    font-size: var(--paragraph-size);
+    display: grid;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.adventure img{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    max-height: 128px;
+    width: auto;
+}
+
+.adventure h2{
+    position: relative;
+    grid-column: 1/6;
+}
+
+.sociallinks {
+    text-decoration: none;
+}
+
+.sociallinks a img{
+    height: 100px;
 }
