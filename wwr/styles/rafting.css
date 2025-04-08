@@ -58,12 +58,13 @@ header p{
     position: relative;
     width: 100%;
     max-width: 1200px; 
-    margin: 0 auto;
+    margin: 5rem auto;
 }
 
 .hero img {
     width: 100%; 
     height: auto; 
+    border: 1px solid black;
 }
 
 .hero h1 {
@@ -97,6 +98,7 @@ header p{
     margin-left: 1rem; 
     max-width: 30%; 
     height: auto;
+    border: 1px solid black;
 }
 
 .hero p {
@@ -131,12 +133,14 @@ p {
     grid-template-rows: auto; 
     align-items: center;
     gap: 2rem;
+    margin-top: 5rem;
 }
 
 .history h2{
     position: relative;
     grid-column: 1/4;
 }
+
 .history img{
     position: relative;
     margin: 0;
@@ -144,6 +148,7 @@ p {
 	height: auto;
     grid-column: 2;
     align-self: center;
+    border: 1px solid black;
 }
 
 .history p{
@@ -163,7 +168,8 @@ p {
     text-align: center;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 0.5rem
+    gap: 0.5rem;
+    margin: 5rem auto;
 }
 
 .adventure h2{
@@ -182,6 +188,7 @@ p {
     padding: 0;
     max-height: 163px;
     width: auto;
+    border: 1px solid black;
 }
 
 .adventure figcaption {
@@ -194,6 +201,7 @@ p {
 footer{
     float: right;
     display: flex;
+    margin-top: 10rem;
 }
 
 footer p{
@@ -206,5 +214,5 @@ footer p{
 .sociallinks a img{
     height: 50px;
     margin: 5px;
-    padding: 0;
+    padding: 2px;
 }
