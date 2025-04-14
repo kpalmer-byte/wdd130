@@ -71,17 +71,21 @@
             </div>
             <div class="message">
                 <h3>Leave your message: </h3>
-                    <div>
-                        <label for="purpose">What is the purpose of your message? </label>
-                        <select id="purpose" name="purpose">
-                            <option value="general">General Inquiry</option>
-                            <option value="reservation">Reservation Question</option>
-                            <option value="website">Website Suggestion</option>
-                        </select>
+                    <div class="purpose">
+                        <p>What is the purpose of your message? </p>
+                        <label>
+                            <input type="radio" name="purpose" value="general">General Inquiry
+                        </label>
+                        <label>
+                            <input type="radio" name="purpose" value="reservation">Reservation Question
+                        </label>
+                        <label>
+                            <input type="radio" name="purpose" value="website">Website Suggestion
+                        </label>
                     </div>
                     <div>
                         <label for="message">Message:</label>
-                        <input type="text" id="message" name="message">
+                        <textarea type="text" id="message" name="message"></textarea>
                     </div>
                     <div>
                         <label for="newsletter">Subscribe to the monthly newsletter ?</label>
