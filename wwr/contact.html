@@ -58,6 +58,7 @@
 
         <form>
             <h2>Send Us A Message </h2>
+            
             <div class="user">
                 <h3>Your Info: </h3>
                 <div>
@@ -69,30 +70,34 @@
                     <input type="email" id="useremail" name="useremail">
                 </div>
             </div>
+            
             <div class="message">
                 <h3>Leave your message: </h3>
                     <div class="purpose">
                         <p>What is the purpose of your message? </p>
-                        <label>
-                            <input type="radio" name="purpose" value="general">General Inquiry
-                        </label>
-                        <label>
-                            <input type="radio" name="purpose" value="reservation">Reservation Question
-                        </label>
-                        <label>
-                            <input type="radio" name="purpose" value="website">Website Suggestion
-                        </label>
+                        
+                        <input type="radio" id="general" name="general" value="general">
+                        <label for="general">General Inquiry</label>
+                        
+                        <input type="radio" id="reservation" name="reservation" value="reservation">
+                        <label for="reservation">Reservation Question</label>
+                        
+                        <input type="radio" id="website" name="website" value="website">
+                        <label for="website">Website Suggestions</label>
+                       
+                            
                     </div>
                     <div>
                         <label for="message">Message:</label>
-                        <textarea type="text" id="message" name="message"></textarea>
+                        <textarea id="message" name="message"></textarea>
                     </div>
                     <div>
                         <label for="newsletter">Subscribe to the monthly newsletter ?</label>
                         <input type="checkbox" id="newsletter" name="newsletter">
                     </div>
                 </div>
-            <button type="submit">Send Message</button>
+                <button type="submit">Send Message</button>
+            </div>
         </form>
     </main>
     <footer>
