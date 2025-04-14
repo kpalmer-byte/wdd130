@@ -1,11 +1,12 @@
 :root{
-    --primary-color: #002E4C;
-    --secondary-color: #e4f0f1;
-    --accent-color-1: #996e1e;
-    --accent-color-2: #077eb0;
+    --primary: #002E4C;
+    --secondary: #e4f0f1;
+    --accent-1: #996e1e;
+    --accent-2: #077eb0;
     --heading-font: "Rubik Dirt", system-ui;
     --paragraph-font: "Geist", sans-serif;
-    --paragraph-size: 1.2rem
+    --paragraph-size: 1.2rem;
+    --margin: 3rem auto;
 }
 
 body {
@@ -19,7 +20,7 @@ header{
 	display: grid;
 	grid-template-columns: 120px 1fr 1fr;
 	align-items: center;
-	border-bottom: 1px solid #E5F1F2;
+	border-bottom: 1px solid var(--secondary);
 	max-width: 1000px;
 }
 
@@ -34,7 +35,7 @@ header p{
     font-size: 1.7rem;
     font-weight: 400; 
     font-style: normal;
-    color: var(--primary-color);
+    color: var(--primary);
 }
 
 .navigation {
@@ -48,7 +49,7 @@ header p{
 .navigation a {
     flex: 1 1 auto;
 	display: block;
-	color:  var(--accent-color-2);
+	color:  var(--accent-2);
 	padding: 20px;
 	text-decoration: none;
 	font-size: var(--paragraph-size)
@@ -58,7 +59,7 @@ header p{
     position: relative;
     width: 100%;
     max-width: 1200px; 
-    margin: 5rem auto;
+    margin: var(--margin);
 }
 
 .hero img {
@@ -69,27 +70,49 @@ header p{
 
 .hero h1 {
     position: absolute;
-    height: auto;
-    width: auto;
     top: 10%; 
     left: 10%;
     right: 10%;
+}
+h1 {
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: var(--margin);
     text-align:center;
     font-family: var(--heading-font);
     font-size: 4.0rem;
     font-weight: 400; 
     font-style: normal;
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
+    color: var(--primary);
+    background-color: var(--secondary);
     padding: 1rem;
 }
+
+h2 {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary);
+    border-bottom: 1px solid var(--accent-2);
+}
+
+p {
+    font-family: var(--paragraph-font);
+    font-size: var(--paragraph-size);
+    font-weight: 400;
+    font-style: normal;
+    color: var(--accent-1);
+}    
 
 .hero article {
     position: absolute;
     bottom: 10%;
     left: 5%;
     right: 5%;
-    background-color: rgb(228, 240, 241, 0.5);
+    background-color: rgba(228, 240, 241, 0.502);
     padding: 1rem;
 }
 
@@ -102,47 +125,28 @@ header p{
 }
 
 .hero p {
-    color: var(--primary-color);
+    color: var(--primary);
     font-family: var(--paragraph-font);
     font-size: var(--paragraph-size);
     font-weight: 400;
 }
-
-h2 {
-    text-align: center;
-    font-family: var(--heading-font);
-    font-size: 2.0rem;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--primary-color);
-}
-
-p {
-    font-family: var(--paragraph-font);
-    font-size: var(--paragraph-size);
-    font-weight: 400;
-    font-style: normal;
-    color: var(--accent-color-1);
-}    
 
 .history{
-    position: relative;
-    margin: 1rem;
+    margin: var(--margin);
 	display: grid;
 	grid-template-columns: 1fr 250px 1fr;
     grid-template-rows: auto; 
     align-items: center;
     gap: 2rem;
-    margin-top: 5rem;
+    
 }
 
 .history h2{
-    position: relative;
     grid-column: 1/4;
+    text-align: left;
 }
 
 .history img{
-    position: relative;
     margin: 0;
 	width: 100%;
 	height: auto;
@@ -152,13 +156,11 @@ p {
 }
 
 .history p{
-    position: relative;
     grid-column: 1; 
     text-align: justify;
 }
 
 .history p.p2{
-    position: relative;
     grid-column: 3; 
     text-align: justify;
 }
@@ -167,19 +169,13 @@ p {
     display: grid;
     text-align: center;
     justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     gap: 0.5rem;
-    margin: 5rem auto;
+    margin: var(--margin);
 }
 
 .adventure h2{
-    position: relative;
     grid-column: 1/6;
-}
-
-.adventure figure {
-    margin: 0;
-    padding: 0;
 }
 
 .adventure img{
@@ -191,28 +187,187 @@ p {
     border: 1px solid black;
 }
 
-.adventure figcaption {
+figcaption {
     margin-top: 0.25rem;
     font-family: var(--paragraph-font);
-    color: var(--accent-color-1);
+    color: var(--accent-1);
     font-size: var(--paragraph-size);
+    text-align: center;
 }
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.headquarters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    margin: 3rem auto;
+    gap: 2rem;
+}
+
+.contact {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;         
+    justify-content: flex-start; 
+    height: 100%;      
+}
+
+.map {
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.employees {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+.employees img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.employees h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 1rem;
+}
+
+.employees p {
+    text-align: left;
+    line-height: 1.6;
+    align-self: center;
+    margin: 2rem;
+}
+
+.employees p.p2 {
+    grid-column: 1;
+    grid-row: 3;
+
+}
+.employees figure.employee-2{
+    grid-column: 2;
+    grid-row: 3;
+}
+
+form {
+    width: 650px;
+    margin: var(--margin);
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    background-color:var(--secondary);
+    display: grid;
+}
+
+.user {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.message {
+    display: grid;
+    gap: .5rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+h3{
+    padding: .5rem;
+    font-size: 1.25rem;
+    color: var(--primary);
+    font-family: var(--heading-font);
+    font-weight: 400;
+    grid-column: 1/-1;
+}
+
+.form-item {
+    display: grid;
+    align-items: center;
+}
+
+
+label{
+    text-align: right;
+    padding-right: 1rem;
+    font-family: var(--paragraph-font);
+    color: var(--primary);
+}
+
+input[type="email"] {
+    width: 100%;
+    background-color: white;
+}
+
+input[type="text"] {
+    width: 100%;
+    background-color: white;
+}
+
+label[for="message"] {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+input[id="message"] {
+    height: 4rem;
+    text-align: start;
+}
+
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;
+}
+
+select {
+    width: 45%;
+    height: 1.5rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+button {
+    margin: 1rem;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    padding: .75rem;
+    font-size: 1.2rem;
+  }
 
 footer{
     float: right;
     display: flex;
-    margin-top: 10rem;
+    margin: var(--margin);
 }
 
 footer p{
-    color: var(--accent-color-2);
+    color: var(--accent-2);
 }
 .sociallinks {
     text-decoration: none;
 }
 
 .sociallinks a img{
-    height: 50px;
-    margin: 5px;
+    height: 40px;
+    margin: 10px;
     padding: 2px;
 }
