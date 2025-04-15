@@ -279,12 +279,12 @@ label{
     color: var(--primary);
 }
 
-input[type="email"] {
+#useremail {
     width: 100%;
     background-color: white;
 }
 
-input[type="text"] {
+#fullname {
     width: 100%;
     background-color: white;
 }
