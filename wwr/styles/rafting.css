@@ -28,6 +28,7 @@ header img{
     margin: 0 0.65rem 0 0.65rem;
 	width: 120px;
 	height: auto;
+    border: none;
 }
 
 header p{
@@ -55,24 +56,11 @@ header p{
 	font-size: var(--paragraph-size)
 }
 
-.hero {
-    position: relative;
-    width: 100%;
-    max-width: 1200px; 
-    margin: var(--margin);
-}
-
-.hero img {
-    width: 100%; 
-    height: auto; 
+img {
+    margin: 0.5rem;
+    border: 0;
+    padding: 0;
     border: 1px solid black;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 10%; 
-    left: 10%;
-    right: 10%;
 }
 h1 {
     position: relative;
@@ -107,11 +95,30 @@ p {
     color: var(--accent-1);
 }    
 
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; 
+    margin: var(--margin);
+}
+
+.hero img {
+    width: 100%; 
+    height: auto; 
+}
+
+.hero h1 {
+    position: absolute;
+    top: 30%; 
+    left: 50px;
+    right: 50px;
+}
+
 .hero article {
     position: absolute;
     bottom: 10%;
-    left: 5%;
-    right: 5%;
+    left: 50px;
+    right: 50px;
     background-color: rgba(228, 240, 241, 0.502);
     padding: 1rem;
 }
@@ -121,7 +128,6 @@ p {
     margin-left: 1rem; 
     max-width: 30%; 
     height: auto;
-    border: 1px solid black;
 }
 
 .hero p {
@@ -152,7 +158,6 @@ p {
 	height: auto;
     grid-column: 2;
     align-self: center;
-    border: 1px solid black;
 }
 
 .history p{
@@ -163,41 +168,6 @@ p {
 .history p.p2{
     grid-column: 3; 
     text-align: justify;
-}
-
-.adventure{
-    display: grid;
-    text-align: center;
-    justify-content: center;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0.5rem;
-    margin: var(--margin);
-}
-
-.adventure h2{
-    grid-column: 1/6;
-}
-
-.adventure img{
-    margin: 0.5rem;
-    border: 0;
-    padding: 0;
-    max-height: 163px;
-    width: auto;
-    border: 1px solid black;
-}
-
-figcaption {
-    margin-top: 0.25rem;
-    font-family: var(--paragraph-font);
-    color: var(--accent-1);
-    font-size: var(--paragraph-size);
-    text-align: center;
-}
-
-figure {
-    margin: 0;
-    padding: 0;
 }
 
 .headquarters {
@@ -236,7 +206,6 @@ figure {
     width: 100%;
     max-width: 200px;
     height: auto;
-    border: 1px solid black;
     padding: 1rem;
 }
 
@@ -366,6 +335,153 @@ button {
     font-size: 1.2rem;
 }
 
+.hero h3 {
+    position: absolute;
+    bottom: 35%; 
+    left: 34px;
+    right: 34px;
+    text-align: center;
+    background-color: var(--secondary);
+}
+
+.newsletter p {
+    text-align: center;
+    color: var(--primary);
+}
+
+.call-to-action {
+    text-align: center;
+    background-color: var(--secondary);
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    width: 650px;
+}
+  
+.call-to-action h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+  
+.call-to-action p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+  
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    background-color: var(--primary);
+    border-radius: 5px;
+    color: white;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-2);
+}
+
+button:hover {
+    background-color: var(--accent-2);
+}
+
+.company-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 3rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.company-info h2 {
+    grid-column: 1 / -1; 
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adventure {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; 
+    text-align: center;
+    margin: var(--margin);
+    position: relative;
+}
+
+.adventure h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.adventure h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.adventure img {
+    max-height: 250px;
+    width: auto;
+}
+
+.second-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; 
+    text-align: center;
+    margin: var(--margin);
+    position: relative;
+}
+
+.second-row h3 {
+    width: 100%;
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 0.25rem;
+    font-family: var(--paragraph-font);
+    color: var(--accent-1);
+    font-size: var(--paragraph-size);
+    text-align: center;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.trip-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    color: var(--accent-1);
+    font-family: var(--paragraph-font);
+}
+
+thead {
+    color: var(--primary);
+}
+
+.trip-summary th,
+.trip-summary td {
+    border: 1px solid black;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.trip-summary th {
+    background-color: var(--secondary);
+}
+
 footer{
     float: right;
     display: flex;
@@ -383,4 +499,5 @@ footer p{
     height: 40px;
     margin: 10px;
     padding: 2px;
+    border: none;
 }
